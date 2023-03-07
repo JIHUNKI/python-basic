@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>     <!-- link tag 는 css 불러오기-->
+    <body>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style>
+        /* 태그의 이름을 선택하는 경우 */
+        h1{
+           color : red 
+        }
+        /* p태그 선택 */
+        p{
+            color : blue
+        }
+        /* id값을 선택하는 경우 */
+        #content1{
+            font-size : 25px;
+        }
+       
+       
+        /* class 값을 선태하는 경우 */
+        .container{
+            padding : 30px;  /*좌우 공간을 추겠다*/
+            background-color:yellow;  /*뒷 배경 색깔*/
+        }
+        .mid{
+            text-align: center;
+        }
+        .b_text{                      
+            font-weight: bold;    /*bold체*/
+        }
+    </style>
+</head>   
+<body>
+    <h1 class="container mid">index page</h1>
+    <!-- <a href="/second">second로 이동</a> -->
+    <!-- form 태그 시작 -->
+    <p id = "content1" class = "b_text container">
+        경기 침체가 계속되면서 대기업 가동률이 전년보다 2%포인트 이상 떨어졌다. 업황 부진을 겪는 기업들은 역대급 고용 한파를 예고하며 채용을 줄이고 희망퇴직을 늘리는 분위기다.
+
+        ●자동차 제약 외 모든 업종 가동률 하락
+    <p/>
+    <p id = "condtent2" class="mid">
+        20일 기업분석연구소 리더스인덱스가 국내 매출 상위 500대 기업 중 가동률을 공시한 200개 기업을 분석한 결과, 이들 기업의 올해 3분기 평균가동률은 78.4%로 집계됐다.
+        
+        이는 작년 동기(80.5%)와 비교하면 2.1%포인트 떨어진 수치다.
+    </p>    
+    <p id="condtent3" class="container mid">    
+         코로나 유행 첫해인 2020년 3분기 79.4%를 기록한 것보다도 1%포인트 수치가 떨어졌다.
+        
+        기업 설비 투자는 늘었지만, 전세계적 경기 침체로 생산이 줄면서 생산 능력 대비 실제 생산 실적을 백분율로 산출한 가동률이 떨어진 것이다.
+        
+    </p>
+    <form action="/second" method="post">   <!--action="/second" : second.html로 이동     method = (post방식(보안적)  , get방식 처리속도가빠름)-->
+        <input type="text" name="id"><br>   <!--<br>:/t과 같은뜻    name : key 값   type = test : 문자로인식 , 값을 입력하면 "/second"로 가는 행동-->
+        <input type="password" name="pass"><br> <!-- type = password : dot 비식별화-->
+        <input type="submit">  <!-- 제출버튼이 생김-->
+    </form>
+
+    <form action="/data" method="post">
+        <select name="menu">                        <!-- 파도타기 형식의 선택할수있는 칸이 나옴-->
+            <option value="chicken">치킨</option>   <!--menu에서 치킨 소세지 감자튀김을 선택하면 key값이 보내짐-->
+            <option value="sausage">소세지</option>
+            <option value="potato">감자튀김</option>
+        </select>
+        <input type="submit">
+    </form>
+</body>
+</html>
+
+<!-- table 태그에 class="table" -->
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">First</th>
+        <th scope="col">Last</th>
+        <th scope="col">Handle</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td>Mark</td>
+        <td>Otto</td>
+        <td>@mdo</td>
+      </tr>
+      <tr>
+        <th scope="row">2</th>
+        <td>Jacob</td>
+        <td>Thornton</td>
+        <td>@fat</td>
+      </tr>
+      <tr>
+        <th scope="row">3</th>
+        <td colspan="2">Larry the Bird</td>
+        <td>@twitter</td>
+      </tr>
+    </tbody>
+  </table>
+  변형

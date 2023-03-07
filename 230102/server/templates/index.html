@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script>
+        function naver(){
+            window.open("https://www.naver.com")
+        }
+        function popup(){
+            alert("Test")
+        }
+    </script>
+</head>
+<body>
+    <button id = "bt_1" onclick="naver()">NAVER</button>
+    <button onclick="popup()">POPUP</button>  <!-- popup 함수 실행 -->
+    <button id = "bt_2">jquery</button><br>
+    <input type="text" id="_id"><br>
+    <input type="password" id="_pass">
+    <p id="password"></p>
+    <p>ubion</p>
+    6
+    <p>project</p>
+    <script>
+        // bt_2라는 id를 가진 태그를 선택한다. bt_2라는 id를 가진 버튼을 클릭하면 함수를 실행
+        $("#bt_2").click(function(){
+            $("p").remove() //모든 p태그로 나타나는 것을 제거한다.
+        })
+        // id가 _pass인 곳에 입력을 하면
+        $("#_pass").keyup(function(){
+            // id가 password인 곳에 _pass의 value가 입력된다.
+            // $("#password").html($('#_pass').val())
+            $.get(
+                '/data',
+                {
+                    password : $("#_pass").val()
+                },
+                function(data,status){
+                    
+                }
+            )
+        })
+    </script>
+</body>
+</html>
